@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34526.213
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B59EFA4-7258-43EB-AFBD-0FE4E15E58CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC_Caixa", "src\FC_Caixa\FC_Caixa.csproj", "{291C47C4-F739-4D2D-92E6-E6696D1E0015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FC.Relatorio", "src\FC.Relatorio\FC.Relatorio.csproj", "{CCA5D3C5-672E-492A-8257-4651DDBD1852}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{291C47C4-F739-4D2D-92E6-E6696D1E0015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291C47C4-F739-4D2D-92E6-E6696D1E0015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291C47C4-F739-4D2D-92E6-E6696D1E0015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291C47C4-F739-4D2D-92E6-E6696D1E0015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA5D3C5-672E-492A-8257-4651DDBD1852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA5D3C5-672E-492A-8257-4651DDBD1852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA5D3C5-672E-492A-8257-4651DDBD1852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA5D3C5-672E-492A-8257-4651DDBD1852}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{291C47C4-F739-4D2D-92E6-E6696D1E0015} = {1B59EFA4-7258-43EB-AFBD-0FE4E15E58CF}
+		{CCA5D3C5-672E-492A-8257-4651DDBD1852} = {1B59EFA4-7258-43EB-AFBD-0FE4E15E58CF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0152686D-AC57-4ACF-B244-9ADEB0C287FA}
+	EndGlobalSection
+EndGlobal
