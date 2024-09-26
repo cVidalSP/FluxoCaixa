@@ -1,5 +1,6 @@
 ﻿using FC.Caixa.Configurations;
 using FC.Caixa.Data;
+using FC.Caixa.Infra;
 using FC.Caixa.Interfaces.Repository;
 using FC.Caixa.Interfaces.Services;
 using FC.Caixa.Repositories;
@@ -16,6 +17,8 @@ namespace FC.Caixa.Services.Extensions
 
             services.AddScoped<ICaixaService, CaixaService>();
             services.AddScoped<ICaixaRepository, CaixaRepository>();
+
+            services.AddSingleton<RabbitMQService>();
 
             services.AddControllers();
             services.AddAutoMapper(typeof(AutoMapperProfile));

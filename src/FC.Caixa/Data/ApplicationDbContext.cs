@@ -10,5 +10,10 @@ namespace FC.Caixa.Data
         }
 
         public DbSet<MovimentacaoCaixa> movimentacoes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MovimentacaoCaixa>().ToTable("movimentacoes");
+        }
     }
 }

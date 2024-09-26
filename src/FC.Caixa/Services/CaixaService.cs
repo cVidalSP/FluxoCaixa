@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FC.Caixa.DTOs;
+using FC.Caixa.Infra;
 using FC.Caixa.Interfaces.Repository;
 using FC.Caixa.Interfaces.Services;
 using FC.Caixa.Models;
@@ -10,11 +11,13 @@ namespace FC.Caixa.Services
     {
         private readonly ICaixaRepository _caixaRepository;
         private readonly IMapper _mapper;
+        private readonly RabbitMQService _rabbitMQService;
 
-        public CaixaService(ICaixaRepository caixaRepository, IMapper mapper)
+        public CaixaService(ICaixaRepository caixaRepository, IMapper mapper, RabbitMQService rabbitMQService)
         {
             _caixaRepository = caixaRepository;
             _mapper = mapper;
+            _rabbitMQService = rabbitMQService;
         }
         public async Task RegistrarMovimentacaoAsync(MovimentacaoCaixaDTO dto)
         {
@@ -23,7 +26,7 @@ namespace FC.Caixa.Services
 
             await _caixaRepository.RegistrarMovimentacaoAsync(movimentacao);
 
-            //TODO - Enviar movimentacao para fila
+            _rabbitMQService.EnviarMovimentacao(movimentacao);
         }
     }
 }
