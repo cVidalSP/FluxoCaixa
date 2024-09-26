@@ -1,6 +1,6 @@
-@FC.Relatorio_HostAddress = http://localhost:5274
+@FC_Caixa_HostAddress = http://localhost:5259
 
-GET {{FC.Relatorio_HostAddress}}/weatherforecast/
+GET {{FC_Caixa_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
