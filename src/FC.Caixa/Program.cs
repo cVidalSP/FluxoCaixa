@@ -1,4 +1,4 @@
-using FC.Caixa.Services.Extensions;
+using FC.Caixa.Application.Services.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

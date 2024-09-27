@@ -1,5 +1,5 @@
-﻿using FC.Caixa.DTOs;
-using FC.Caixa.Interfaces.Services;
+﻿using FC.Caixa.Domain.Interfaces.Services;
+using FC.Caixa.DTOs.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FC.Caixa.Controllers
@@ -15,12 +15,11 @@ namespace FC.Caixa.Controllers
             _caixaService = caixaService;
         }
 
-
         [HttpPost("movimentacao")]
         public async Task<IActionResult> RegistrarMovimentacao([FromBody] MovimentacaoCaixaDTO dto)
         {
-            await _caixaService.RegistrarMovimentacaoAsync(dto);
-            return Ok();
+            var result = await _caixaService.RegistrarMovimentacaoAsync(dto);
+            return StatusCode((int)result.StatusCode, result.Message);
         }
     }
 }

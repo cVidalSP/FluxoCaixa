@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FC.Caixa.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240926180834_Inicial")]
-    partial class Inicial
+    [Migration("20240927020434_RemoverDadosTabela")]
+    partial class RemoverDadosTabela
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace FC.Caixa.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("FC.Caixa.Models.MovimentacaoCaixa", b =>
+            modelBuilder.Entity("FC.Caixa.Domain.Models.MovimentacaoCaixa", b =>
                 {
                     b.Property<Guid>("id")
                         .ValueGeneratedOnAdd()
